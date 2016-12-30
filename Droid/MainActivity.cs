@@ -10,7 +10,9 @@ using Android.OS;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Android.Graphics;
+using CustomFonts;
 
+[assembly:ExportRenderer(typeof(IconLabel), typeof(CustomFonts.Droid.IconRenderer))]
 namespace CustomFonts.Droid
 {
 	public class IconRenderer : LabelRenderer

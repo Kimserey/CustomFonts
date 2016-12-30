@@ -25,10 +25,11 @@ namespace CustomFonts
 		{
 			var content = new ContentPage
 			{
-				Title = "Custom Fonts",
+				Title = "Custom Fonts sample",
 				Content = new StackLayout
 				{
-					VerticalOptions = LayoutOptions.Center,
+					Margin = 10,
+					HorizontalOptions = LayoutOptions.CenterAndExpand,
 					Orientation = StackOrientation.Horizontal,
 					Children = {
 						new IconLabel { Text = FontAwesome.FileO.ToString() },
