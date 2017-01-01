@@ -23,6 +23,13 @@ namespace CustomFonts
 	{
 		public App()
 		{
+			var layout = new WrapLayout();
+
+			for (int i = 0; i < 1000; i++)
+			{
+				layout.Children.Add(new IconLabel { Text = FontAwesome.FileO.ToString(), WidthRequest = 30, HeightRequest = 30 });
+			}
+			
 			var content = new ContentPage
 			{
 				Title = "Custom Fonts sample",
@@ -31,29 +38,8 @@ namespace CustomFonts
 					HorizontalOptions = LayoutOptions.CenterAndExpand,
 					Children = {
 						new Label { Text = "Hello world" },
-						new WrapLayout {
-							Children = {
-								new IconLabel { Text = FontAwesome.FileO.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.SmileO.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.Taxi.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.Whatsapp.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.FileO.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.SmileO.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.Taxi.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.Whatsapp.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.FileO.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.SmileO.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.Taxi.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.Whatsapp.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.FileO.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.SmileO.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.Taxi.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.Whatsapp.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.FileO.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.SmileO.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.Taxi.ToString(), WidthRequest = 30, HeightRequest = 30 },
-								new IconLabel { Text = FontAwesome.Whatsapp.ToString(), WidthRequest = 30, HeightRequest = 30 }
-							}
+						new ScrollView {
+							Content = layout
 						}
 					}
 				}
